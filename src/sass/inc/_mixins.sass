@@ -1,0 +1,33 @@
+@mixin no-margin-padding
+	margin: 0px
+	padding: 0px
+
+@mixin header-height($h)
+	display: inline-block
+	box-sizing: border-box
+	height: $h
+	line-height: $h
+
+
+@mixin clear-form-control
+	+no-margin-padding
+	outline: none
+	border-image: none
+	box-sizing: border-box
+	&:focus,
+	&:active,
+	&::-moz-focus-inner,
+	&:-moz-focusring,
+	&::-moz-focus-outer
+		border: none
+		outline: none
+		border-radius: 0px
+		border-image: none
+
+@mixin no-select
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
